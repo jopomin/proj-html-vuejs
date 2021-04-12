@@ -4,3 +4,77 @@
     box-sizing: border-box;
 }
 
+header {
+    background: rgb(80, 0, 30);
+    width: 100%;
+}
+
+#countdown {
+    height: 40px;
+    width: 100%;
+}
+
+#main_header {
+    height: 60px;
+    width: 100%;
+}
+
+main {
+    background: rgb(0, 80, 30);
+    width: 100%;  
+}
+
+#jumbo {
+    height: calc(100vh - 100px);
+    width: 100%;
+}
+
+.main_sect {
+    height: 80vh;
+    width: 100%;
+}
+
+.big_sect {
+    height: 120vh;
+    width: 100%;
+}
+
+#newsletter {
+    height: 250px;
+    width: 100%;
+}
+
+footer {
+    background: rgb(0, 30, 80);
+    width: 100%;      
+}
+
+#ft_links {
+    height: 550px;
+    width: 100%;    
+}
+
+#ft_signature {
+    height: 200px;
+    width: 100%;    
+}
+
+
+
+
+
+.first {
+    background: #fff;
+    opacity: 0;
+}
+
+.second {
+    background: #fff;
+    opacity: 0.2;
+}
+
+.third {
+    background: #fff;
+    opacity: 0.4;
+}
+
