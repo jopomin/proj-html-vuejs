@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Artist Theme - Project - 12 Aprile</title>
@@ -14,8 +14,32 @@
 <body>
     <div id="root">
         <header>
-            <div id="countdown" class="first"></div>
-            <div id="main_header" class="second"></div>
+            <div id="countdown">
+                <p>Starts TOMORROW! Our biggest event of the year...</p>
+                <div id="timer">
+                    <i :class="timer.icon"></i>
+                    <ul>
+                        <li>{{timer.d}}<span>:</span></li>
+                        <li>{{timer.h}}<span>:</span></li>
+                        <li>{{timer.m}}<span>:</span></li>
+                        <li>{{timer.s}}</li>
+                    </ul>
+                </div>
+                <div class="btn btn-sm btn-prim">{{countdownBtn}}</div>
+            </div>
+            <div id="main_header">
+                <div class="header_wrapper">
+                    <div id="logo">
+                        <img :src="logo" alt="">
+                    </div>
+                    <ul id="nav">
+                        <li v-for="link in headLinks">{{link}}<span><i class="fas fa-chevron-down"></i></span></li>
+                    </ul>
+                    <ul id="header_social">
+                        <li v-for="social in socialIcons"><i :class="social"></i></li>
+                    </ul>
+                </div>
+            </div>
         </header>
         <main>
             <div id="jumbo" class="first main_sect"></div>
