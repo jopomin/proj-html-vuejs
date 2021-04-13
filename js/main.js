@@ -1,17 +1,13 @@
 var app = new Vue ({
     el: '#root',
     data: {
-        logos: [
-            {
-                size: ["xs", "sm", "md", "lg"],
-                title: "MaxCoach",
+        logo: {
+                brand: "MaxCoach",
                 path: "img/",
                 name: "dark-logo",
                 ext: ".png"
-            }
-        ],
+            },
 
-        
         headLinks: [
             {
                 title: "Home",
@@ -82,8 +78,7 @@ var app = new Vue ({
             m: "00",
             s: "00"
         },
-        address: [
-            {
+        address: {
                 header: "Address",
                 url: "#",
                 street: "382 NE 191st",
@@ -100,13 +95,11 @@ var app = new Vue ({
                 opDay: "Monday",
                 clDay: "Friday",
                 email: "support@maxcoach.com",
-            }
-        ],
-        explore: [
-            {
-                header: "Explore",
-                url: "#",
-                chLinks: [
+        },
+        explore: {
+                    header: "Explore",
+                    url: "#",
+                    links: [
                     {
                         header: "Start Here",
                         url: "#",
@@ -127,33 +120,62 @@ var app = new Vue ({
                         header: "Contact us",
                         url: "#",
                     },
-                ]
-            }
-        ],
-        information: [
-            {
-                header: "Information",
-                url: "#",
-                chLinks: [
-                    {
-                        header: "Membership",
-                        url: "#",
+                ],
+        },
+        information: {
+                    header: "Information",
+                    url: "#",
+                    links: [
+                        {
+                            header: "Membership",
+                            url: "#",
+                        },
+                        {
+                            header: "Purchase Guide",
+                            url: "#",
+                        },
+                        {
+                            header: "Privacy Policy",
+                            url: "#",
+                        },
+                        {
+                            header: "Terms of services",
+                            url: "#",
+                        },
+                    ]
+            },
+        instaInfo: {
+                    header: "Instagram",
+                    account: "@maxcoach",
+                    url: "#",
+                    thumbnails: [
+                        {
+                            path: "img/",
+                            name: "insta_1",
+                            ext: ".jpg",
+                            url: "#",
+                        },
+                        {
+                            path: "img/",
+                            name: "insta_2",
+                            ext: ".jpg",
+                            url: "#",                            
+                        },
+                        {
+                            path: "img/",
+                            name: "insta_3",
+                            ext: ".jpg",
+                            url: "#",                            
+                        },
+                    ],
+            },
+            signature: {
+                year: 2020,
+                author: {
+                    name: "Jopomin",
+                    url: "https://www.linkedin.com/in/giovanniporcelliminervini/",
                     },
-                    {
-                        header: "Purchase Guide",
-                        url: "#",
-                    },
-                    {
-                        header: "Privacy Policy",
-                        url: "#",
-                    },
-                    {
-                        header: "Terms of services",
-                        url: "#",
-                    },
-                ]
-            }
-        ],
+            },
     }
 })
 

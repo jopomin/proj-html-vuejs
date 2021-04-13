@@ -30,7 +30,7 @@
             <div id="main_header">
                 <div class="header_wrapper">
                     <div id="logo">
-                        <img v-for="logo in logos" :src="logo.path + logo.name + logo.ext" :alt="logo.title">
+                        <img :src="logo.path + logo.name + logo.ext" :alt="logo.brand + ' logo'">
                     </div>
                     <ul id="nav">
                         <li v-for="link in headLinks"><a :href="link.url">{{link.title}}<span><i class="fas fa-chevron-down"></i></span></a></li>
@@ -56,32 +56,41 @@
             <div class="footer_wrapper">
                 <div id="ft_links">
                     <div id="ft_address">
-                        <ul v-for="add in address">
-                            <li class="ft_links_header"><a :href="add.url">{{add.header}}</a></li>
-                            <li class="ft_link"><span>{{add.street}}</span> # <span>{{add.streetNum}}</span> <span>{{add.city}}</span>, <span>{{add.state}}</span> <span>{{add.zip1}}</span>-<span>{{add.zip2}}</span></li>
-                            <li class="ft_link"><span>+ {{add.intPref}}</span> <span>{{add.phoneNum}}</span> (<span>{{add.opTime}}</span> - <span>{{add.clTime}}</span> <span>{{add.timeZone}}</span>, <span>{{add.opDay}}</span> - <span>{{add.clDay}}</span>)</li>
-                            <li class="ft_link">{{add.email}}</li>
+                        <h3 class="ft_links_header"><a :href="address.url">{{address.header}}</a></h3>
+                        <ul>
+                            <li class="ft_link">{{address.street}} # {{address.streetNum}} {{address.city}}, {{address.state}} {{address.zip1}}-{{address.zip2}}</li>
+                            <li class="ft_link">+ {{address.intPref}} {{address.phoneNum}} ({{address.opTime}} - {{address.clTime}} {{address.timeZone}}, {{address.opDay}} - {{address.clDay}})</li>
+                            <li class="ft_link">{{address.email}}</li>
                             <ul class="social_icons">
                                 <li v-for="social in socialIcons"><a :href="social.url"><i :class="social.family + ' ' + social.prefix + social.name + social.suffix"></i></a></li>
                             </ul>
                         </ul>
                     </div>
                     <div id="ft_explore">
-                        <ul v-for="(exp, i) in explore">
-                            <li class="ft_links_header"><a :href="exp.url">{{exp.header}}</a></li>
-                            <li v-for="link in explore[i].chLinks" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
+                        <h3 class="ft_links_header"><a :href="explore.url">{{explore.header}}</a></h3>
+                        <ul>
+                            <li v-for="link in explore.links" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
                         </ul>
                     </div>
                     <div id="ft_info">
-                        <ul v-for="(info, i) in information">
-                            <li class="ft_links_header"><a :href="info.url">{{info.header}}</a></li>
-                            <li v-for="link in information[i].chLinks" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
+                        <h3 class="ft_links_header"><a :href="information.url">{{information.header}}</a></h3>
+                        <ul>
+                            <li v-for="link in information.links" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
                         </ul>
                     </div>
-                    <div id="ft_insta"></div>
+                    <div id="ft_insta">
+                        <h3 class="ft_links_header"><a :href="instaInfo.url">{{instaInfo.header}}<span id="insta_account">{{instaInfo.account}}</span></a></h3>
+                        <div id="instapics_container">
+                            <a v-for="thumb in instaInfo.thumbnails" class="instapic" :href="thumb.url">
+                                <img :src="thumb.path + thumb.name + thumb.ext" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="ft_signature" class="second"></div>
+            <div id="ft_signature">
+                <p>&#169 {{signature.year}} <a :href="signature.author.url" target="_blank">{{signature.author.name}}</a>. All Rights Reserved</p>
+            </div>
         </footer>
     </div>
     <script src="js/main.js"></script>

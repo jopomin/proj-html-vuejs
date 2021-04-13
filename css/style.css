@@ -9,6 +9,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .btn {
     border-radius: 5px;
     font-weight: 600;
@@ -111,7 +116,6 @@ header {
 
 #nav li a {
     color: #797979;
-    text-decoration: none;
 }
 
 #nav li span {
@@ -133,7 +137,6 @@ header {
 
 .social_icons li a {
     color: #797979;
-    text-decoration: none;
 }
 
 main {
@@ -162,7 +165,6 @@ main {
 }
 
 footer {
-    background: rgb(0, 30, 80);
     width: 100%;      
 }
 
@@ -174,8 +176,7 @@ footer {
 
 #ft_links {
     background: #fff;
-    height: 550px;
-    padding: 100px 0;
+    padding: 100px 0 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -193,21 +194,17 @@ footer {
 
 .ft_links_header a {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 15px;
     color: #1b1b1b;
-    text-decoration: none;
 }
 
 .ft_link,
 .ft_link a {
     font-size: 18px;
+    font-weight: 600;
     color: #797979;
     margin: 12px 0;
-}
-.ft_link a {
-    cursor: pointer;
-    text-decoration: none;
 }
 
 #ft_explore .ft_link,
@@ -229,9 +226,49 @@ footer .social_icons li a {
     color: #bcbcbc;
 }
 
+#insta_account {
+    color: #ef6f31;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+#instapics_container {
+    display: flex;
+    margin: 20px 0;
+}
+
+.instapic {
+    height: 150px;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.instapic:last-child {
+    margin-right: 0;
+}
+
+.instapic img {
+    height: 100%;
+}
+
+
+
+
+
 #ft_signature {
-    height: 80px;
-    width: 100%;    
+    background: #fff;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#ft_signature p,
+#ft_signature a {
+    color: #bcbcbc;
 }
 
 
