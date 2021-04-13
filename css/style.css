@@ -1,3 +1,5 @@
+/* GENERALI */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,26 @@ a {
     cursor: pointer;
 }
 
+
+/* TITOLI */
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #1b1b1b;
+}
+
+.sub_header {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #69a0fd;
+}
+
+/* PULSANTI */
+
 .btn {
     border-radius: 5px;
     font-weight: 600;
@@ -21,12 +43,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
     cursor: pointer;
 }
 
 .btn-sm {
     padding: 2px 15px;
-    font-size: 14px;
+}
+
+.btn-bg {
+    padding: 10px 25px;
+    margin: 10px 0;
 }
 
 .btn-prim {
@@ -34,12 +61,15 @@ a {
     color: #fff;
 }
 
+
+/* HEADER */
+
 header {
     width: 100%;
 }
 
 #countdown {
-    background: #f4f0ef;
+    background: #f5f5f5;
     height: 40px;
     width: 100%;
     display: flex;
@@ -139,14 +169,95 @@ header {
     color: #797979;
 }
 
+/* MAIN */
+
 main {
     background: rgb(0, 80, 30);
     width: 100%;  
 }
 
 #jumbo {
-    height: calc(100vh - 120px);
+    background: #f4f0ef;
+    height: 80vh;
     width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.art_shape_1 {
+    position: absolute;
+    top: 0;
+    right: 120px;
+}
+
+.art_shape_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.art_shape_3 {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+
+.art_shape_4 {
+    position: absolute;
+    top: 60px;
+    right: 140px;
+}
+
+.art_shape_5 {
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+}
+
+.pallini {
+    position: absolute;
+    bottom: 40px;
+    right: 340px;
+}
+
+.shadpic {
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.art_hero_1 {
+    position: absolute;
+    bottom: 70px;
+    left: 165px;
+}
+
+.art_hero_2 {
+    position: absolute;
+    top: 90px;
+    left: 350px;
+}
+
+.art_hero_3 {
+    position: absolute;
+    bottom: 30px;
+    left: 500px;
+}
+
+.art_hero_4 {
+    position: absolute;
+    bottom: 70px;
+    right: 220px;
+}
+
+.jumbo_header_cont {
+    z-index: 999;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main_sect {
@@ -163,6 +274,8 @@ main {
     height: 250px;
     width: 100%;
 }
+
+/* FOOTER */
 
 footer {
     width: 100%;      
