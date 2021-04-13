@@ -17,7 +17,7 @@
             <div id="countdown">
                 <p>Starts TOMORROW! Our biggest event of the year...</p>
                 <div id="timer">
-                    <i :class="timer.icon"></i>
+                    <i :class="timer.icon.family + ' ' + timer.icon.prefix + timer.icon.name + timer.icon.suffix"></i>
                     <ul>
                         <li>{{timer.d}}<span>:</span></li>
                         <li>{{timer.h}}<span>:</span></li>
@@ -30,13 +30,13 @@
             <div id="main_header">
                 <div class="header_wrapper">
                     <div id="logo">
-                        <img :src="logo" alt="">
+                        <img v-for="logo in logos" :src="logo.path + logo.name + logo.ext" :alt="logo.title">
                     </div>
                     <ul id="nav">
-                        <li v-for="link in headLinks">{{link}}<span><i class="fas fa-chevron-down"></i></span></li>
+                        <li v-for="link in headLinks"><a :href="link.url">{{link.title}}<span><i class="fas fa-chevron-down"></i></span></a></li>
                     </ul>
-                    <ul id="header_social">
-                        <li v-for="social in socialIcons"><i :class="social"></i></li>
+                    <ul class="social_icons">
+                        <li v-for="social in socialIcons"><a :href="social.url"><i :class="social.family + ' ' + social.prefix + social.name + social.suffix"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,34 @@
             <div id="newsletter" class="third"></div>
         </main>
         <footer>
-            <div id="ft_links" class="first"></div>
+            <div class="footer_wrapper">
+                <div id="ft_links">
+                    <div id="ft_address">
+                        <ul v-for="add in address">
+                            <li class="ft_links_header"><a :href="add.url">{{add.header}}</a></li>
+                            <li class="ft_link"><span>{{add.street}}</span> # <span>{{add.streetNum}}</span> <span>{{add.city}}</span>, <span>{{add.state}}</span> <span>{{add.zip1}}</span>-<span>{{add.zip2}}</span></li>
+                            <li class="ft_link"><span>+ {{add.intPref}}</span> <span>{{add.phoneNum}}</span> (<span>{{add.opTime}}</span> - <span>{{add.clTime}}</span> <span>{{add.timeZone}}</span>, <span>{{add.opDay}}</span> - <span>{{add.clDay}}</span>)</li>
+                            <li class="ft_link">{{add.email}}</li>
+                            <ul class="social_icons">
+                                <li v-for="social in socialIcons"><a :href="social.url"><i :class="social.family + ' ' + social.prefix + social.name + social.suffix"></i></a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="ft_explore">
+                        <ul v-for="(exp, i) in explore">
+                            <li class="ft_links_header"><a :href="exp.url">{{exp.header}}</a></li>
+                            <li v-for="link in explore[i].chLinks" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
+                        </ul>
+                    </div>
+                    <div id="ft_info">
+                        <ul v-for="(info, i) in information">
+                            <li class="ft_links_header"><a :href="info.url">{{info.header}}</a></li>
+                            <li v-for="link in information[i].chLinks" class="ft_link"><a :href="link.url">{{link.header}}</a></li>
+                        </ul>
+                    </div>
+                    <div id="ft_insta"></div>
+                </div>
+            </div>
             <div id="ft_signature" class="second"></div>
         </footer>
     </div>
