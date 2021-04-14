@@ -211,8 +211,8 @@ main {
 
 .blue_stain_md {
     position: absolute;
-    top: 0;
-    right: 120px;
+    bottom: 50px;
+    left: -60px;
 }
 
 .art_shape_1 {
@@ -500,6 +500,14 @@ main {
     z-index: 1;
 }
 
+.video_img_cont {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 570px;
+    width: 970px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
 .yt-icon {
     position: absolute;
     top: 50%;
@@ -508,10 +516,110 @@ main {
     cursor: pointer;
 }
 
-#video_thumb {
+/* MAIN - TESTIMONIALS */
 
+#testimonials {
+    background: #faf8f6;
+    height: 80vh;
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#test_header_cont {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#test_header_cont h2 {
+    color: #1b1b1b;
+    font-size: 30px;
+}
+
+#test_boxes_cont {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.testimonial_box {
+    height: 100%;
+    width: calc((100% - 100px) / 3);
+    background: #fff;
+    opacity: 0.5;
+    padding: 40px 70px 40px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.testimonial_box.active {
+    opacity: 1;
+}
+
+.testimonial_box h4 {
+    font-size: 20px;
+    color: #1b1b1b;
+    margin-bottom: 10px;
+}
+
+.testimonial_box > p {
+    font-size: 18px;
+    color: #1b1b1b;
+    margin-bottom: 30px;
+}
+
+.test_profile_box {
+    display: flex;
+}
+
+.test_pic {
+    height: 65px;
+    width: 65px;
+    border-radius: 100%;
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+.test_pic img {
+    height: 100%;
+}
+
+.test_info h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.test_job_profile {
+    font-size: 15px;
+}
+
+#dots_container {
+    display: flex;
+    align-items: center;
+}
+
+.test_dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    margin-right: 18px;
+    background: #1b1b1b;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.test_dot:last-child {
+    margin-right: 0;
+}
+
+.test_dot.active {
+    opacity: 1;
+    transform: scale(150%);
+}
 
 /* MAIN - NEWSLETTER */
 
