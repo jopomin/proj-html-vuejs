@@ -20,19 +20,10 @@ section {
     width: 100%;
 }
 
-.small_sect {
-    height: 50vh;
+.section_header_container {
+    margin-bottom: 40px;
+    text-align: center;
 }
-
-.medium_sect {
-    height: 70vh;
-}
-
-.big_sect {
-    height: 120vh;
-}
-
-
 
 /* TITOLI */
 
@@ -49,6 +40,12 @@ h1 {
     margin-bottom: 10px;
     font-weight: 600;
     color: #69a0fd;
+}
+
+.section_header_container h2 {
+    font-size: 32px;
+    line-height: 40px;
+    color: #1b1b1b;
 }
 
 /* PULSANTI */
@@ -621,11 +618,181 @@ main {
     transform: scale(150%);
 }
 
+/* MAIN - COURSES */
+
+#courses {
+    background: #fff;
+    padding: 70px;
+    position: relative;
+    display: flex;
+}
+
+.courses_shape_01 {
+    position: absolute;
+    transform: rotate(240deg);
+    opacity: 0.5;
+    top: 200px;
+    right: -250px;
+}
+
+.courses_shape_02 {
+    position: absolute;
+    transform: rotate(15deg);
+    opacity: 0.3;
+    top: 400px;
+    left: -400px;
+}
+
+#courses_bg h2 {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 50%;
+    right: -180px;
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #f4f0ef;
+}
+
+#courses_content_cont {
+    z-index: 1;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#courses_boxes_cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course_box {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.course_pic {
+    height: 300px;
+    width: 300px;
+}
+
+.course_pic img {
+    height: 100%;
+}
+
+.course_info {
+    padding: 18px 30px 18px 18px;
+}
+
+.course_price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ef6f31;
+    margin-bottom: 5px;
+}
+
+.course_name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 8px;    
+}
+
+.less_stud {
+    color: #797979;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+}
+
+.less_stud i {
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.less_stud p {
+    font-size: 14px;
+}
+
+.course_lessons {
+    margin-right: 20px;
+}
+
+.course_lessons,
+.course_students {
+    display: flex;
+    align-items: center;
+}
+
+.courses_btn {
+    margin-top: 30px;
+}
+
+.courses_btn i {
+    margin-left: 8px;
+}
+
 /* MAIN - NEWSLETTER */
 
 #newsletter {
-    height: 280px;
+    background: #224184;
+    height: 200px;
     width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsl_bg_top_left {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.newsl_bg_bott_right {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;    
+}
+
+#newsl_content_cont {
+    margin: 0 auto;
+    z-index: 1;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#newsl_content_cont h2 {
+    font-family: 'Bodoni Moda', serif;
+    color: #fff;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: right;
+    width: 240px;
+    font-weight: lighter;
+    margin-right: 80px;
+}
+
+#insert_mail_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    flex-grow: 1;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
 }
 
 /* FOOTER */
