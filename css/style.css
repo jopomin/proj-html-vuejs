@@ -61,7 +61,7 @@ h1 {
 }
 
 .btn-sm {
-    padding: 2px 15px;
+    padding: 2px 20px;
 }
 
 .btn-bg {
@@ -119,6 +119,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -5px;
 }
 
 #timer ul li {
@@ -1206,6 +1207,52 @@ footer .social_icons li a {
     color: #bcbcbc;
 }
 
+/* FIXED ELEMENTS */
+
+#gotop {
+    position: fixed;
+    margin: 20px;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+    background: #ef6f31;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#gotop a {
+    height: 100%;
+    color: #fff;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidemenu {
+    position: fixed;
+    width: 40px;
+    background:#fff;
+    top: 160px;
+    right: 0;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#sidemenu a {
+    margin: 8px 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1b1b1b;
+}
+
 /* HOVER EFFECTS */
 
 .btn-prim:hover {
@@ -1221,4 +1268,26 @@ footer .social_icons li a {
     background: #fff;
     border: 2px solid #ef6f31;
     transform: translate(-10px, -15px);
+}
+
+#gotop:hover {
+    background: #69a0fd;
+}
+
+#sidemenu a:hover i {
+    color: #ef6f31;
+}
+
+.social_icons li a:hover {
+    color: #ef6f31;
+}
+
+#ft_signature a:hover {
+    color: #69a0fd;
+    font-weight: 600;
+}
+
+#ft_signature a:active {
+    color: #ef6f31;
+    font-weight: 600;
 }
